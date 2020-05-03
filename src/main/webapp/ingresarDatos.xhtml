@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"     
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Ingreso Datos</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <tt>
+                <big>
+                    <big>
+                        <b>
+                            <h:outputText value="Cedula:      "/>                            
+                            <h:inputText value="#{IngresarDatos.cedula}" required="true" requiredMessage="Escriba su cedula"/>
+                        </b>
+                    </big>
+                </big>
+            </tt>
+            <br></br>
+            <br></br>
+            <tt>
+                <big>
+                    <big>
+                        <b>
+                            <h:outputText value="Nombre:     "/>                            
+                            <h:inputText value="#{IngresarDatos.nombre}" required="true" requiredMessage="Escriba su nombre"/>
+                        </b>
+                    </big>
+                </big>
+            </tt>
+            <br></br>
+            <br></br>
+            <tt>
+                <big>
+                    <big>
+                        <b>
+                            <h:outputText value="Apellido: "/>
+                            <h:inputText value="#{IngresarDatos.apellido}" required="true" requiredMessage="Escriba su apellido"/>
+                        </b>
+                    </big>
+                </big>
+            </tt>
+            <br></br>
+            <br></br>
+            <tt>
+
+                <big>
+                    <big>
+                        <b>
+                            <h:outputText value="Fecha Nacimiento: "/>
+                            <p:calendar value="#{IngresarDatos.fechaN}" />
+                        </b>
+                    </big>
+                </big>
+            </tt>
+            <br></br>
+            <br></br>
+            <tt>
+                <big>
+                    <big>
+                        <b>
+                            <h:outputText value="Nivel de Estudio: "/>  
+                        </b>
+                    </big>
+                </big>
+            </tt>
+            <h:selectOneMenu value="#{IngresarDatos.nivel}" required="true" requiredMessage="Seleccione su nivel de estudio">
+                <f:selectItem itemValue="Primaria" itemLabel="Primaria"/>
+                <f:selectItem itemValue="Secundaria" itemLabel="Secundaria"/>
+                <f:selectItem itemValue="Tecnico" itemLabel="Tecnico"/>
+                <f:selectItem itemValue="Tecnologo" itemLabel="Tecnologo"/>
+                <f:selectItem itemValue="Profesional" itemLabel="Profesional"/>
+                <f:selectItem itemValue="Magister" itemLabel="Magister"/>
+            </h:selectOneMenu>
+            <br></br>
+            <br></br>
+            <tt><big><big><b><h:outputText value="Idioma: "/></b></big></big></tt>
+            <tt>
+                <big>
+                    <big>
+                        <h:selectManyCheckbox value="#{IngresarDatos.idiomas}" required="true" requiredMessage="Debe seleccionar al menos uno">
+                            <f:selectItem itemValue="Español" itemLabel="Español"/>
+                            <f:selectItem itemValue="Frances" itemLabel="Frances"/>
+                            <f:selectItem itemValue="Ingles" itemLabel="Ingles"/>
+                            <f:selectItem itemValue="Aleman" itemLabel="Aleman"/>
+                        </h:selectManyCheckbox> 
+                    </big>
+                </big>
+            </tt>
+            <br></br>
+            <tt>
+                <big>
+                    <big>
+                        <b>
+                            <h:outputText value="Días trabajados: "/>
+                        </b>
+                    </big>
+                </big>
+            </tt>
+            <h:inputText value="#{IngresarDatos.diasLaborados}" required="true" requiredMessage="Debe llenar los días trabajados"></h:inputText>
+            <br></br>
+            <p align="center"> 
+                <h:commandButton  value = "Generar recibo" action="Recibo">
+                </h:commandButton>
+            </p>
+        </h:form>
+    </h:body>
+    
+</html>
