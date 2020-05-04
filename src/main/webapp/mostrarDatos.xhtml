@@ -12,39 +12,56 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body>
-        
+
         <form>
-            
+
             <p align="center"> 
-                 <big>
-                     <big>
-                <h:outputText value=" RECIBO "/>
-                </big>
+                <big>
+                    <big>
+                        <b>
+                            <h:outputText value=" RECIBO "/>
+                        </b>
+                    </big>
                 </big>
                 <br></br><br></br>
-                <br></br><br></br>
+                <b>
                 <h:outputText value="Cedula: "/>
-                 <h:outputText value ="#{mostrarDatos.ingresoDatos.cedula} "/>
+                </b>
+                <h:outputText value ="#{mostrarDatos.ingresoDatos.cedula} "/>
                 <br></br><br></br>
-                 <h:outputText value="Nombre: "/>
+                 <b>
+                <h:outputText value="Nombre: "/>
+                 </b>
                 <h:outputText value ="#{mostrarDatos.ingresoDatos.nombre} "/>
                 <br></br><br></br>
-                 <h:outputText value="Apellido: "/>
+                 <b>
+                <h:outputText value="Apellido: "/>
+                 </b>
                 <h:outputText value ="#{mostrarDatos.ingresoDatos.apellido} "/>
                 <br></br><br></br>
+                 <b>
                 <h:outputText value="Fecha Nacimiento: "/>
+                 </b>
                 <h:outputText value ="#{mostrarDatos.ingresoDatos.fechaN} "/>
                 <br></br><br></br>
+                 <b>
                 <h:outputText value="Nivel Estudio: "/>
+                 </b>
                 <h:outputText value="#{mostrarDatos.ingresoDatos.nivel}"/>
                 <br></br><br></br>
+                 <b>
                 <h:outputText value="Idiomas: "/>
+                 </b>
                 <h:outputText value="#{mostrarDatos.idiomasConcatenados}"/>
-                <br></br><br></br>                
+                <br></br><br></br>  
+                 <b>
                 <h:outputText value="Días trabajados: "/>
+                 </b>
                 <h:outputText value="#{mostrarDatos.ingresoDatos.diasLaborados}"/>
                 <br></br><br></br>
+                 <b>
                 <h:outputText value="el valor de su cuenta es: "/>
+                 </b>
                 <h:outputText value="#{mostrarDatos.sueldo}"/>
                 <br></br><br></br><br></br><br></br>
                 <h:form>
