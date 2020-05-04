@@ -20,7 +20,10 @@ public class CalcularSueldo {
     private int pagoNivel;
     //Variable tipo ingresarDatos 
     private IngresarDatos ingresodaDatos;
-
+    /**
+     * 
+     * @param ingreso 
+     */
     public CalcularSueldo(IngresarDatos ingreso) {
         this.ingresodaDatos = ingreso;
         hallarPagoNivel();
@@ -106,7 +109,10 @@ public class CalcularSueldo {
     public int getSueldo() {
         return sueldo;
     }
-
+    /**
+     * 
+     * @param sueldo 
+     */
     public void setSueldo(int sueldo) {
         this.sueldo = sueldo;
     }
@@ -114,7 +120,10 @@ public class CalcularSueldo {
     public String getIdiomas() {
         return idiomas;
     }
-
+    /**
+     * 
+     * @param idiomas 
+     */
     public void setIdiomas(String idiomas) {
         this.idiomas = idiomas;
     }
@@ -122,7 +131,10 @@ public class CalcularSueldo {
     public int getPagoNivel() {
         return pagoNivel;
     }
-
+    /**
+     * 
+     * @param pagoNivel 
+     */
     public void setPagoNivel(int pagoNivel) {
         this.pagoNivel = pagoNivel;
     }

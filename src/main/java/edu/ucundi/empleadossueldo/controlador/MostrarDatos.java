@@ -20,7 +20,7 @@ import javax.inject.Named;
  * @author Eduard Fierro, Arley Rivera
  */
 @Named(value = "mostrarDatos")
-@RequestScoped
+@RequestScoped 
 public class MostrarDatos implements Serializable {
 
     private double sueldo;
@@ -39,11 +39,14 @@ public class MostrarDatos implements Serializable {
         setSueldo(calcula.getSueldo());
         setIdiomasConcatenados(calcula.getIdiomas());
     }
-
+    
     public double getSueldo() {
         return sueldo;
     }
-
+    /**
+     * 
+     * @param sueldo 
+     */
     public void setSueldo(double sueldo) {
         this.sueldo = sueldo;
     }
@@ -51,7 +54,10 @@ public class MostrarDatos implements Serializable {
     public String getIdiomasConcatenados() {
         return idiomasConcatenados;
     }
-
+    /**
+     * 
+     * @param idiomasConcatenados 
+     */
     public void setIdiomasConcatenados(String idiomasConcatenados) {
         this.idiomasConcatenados = idiomasConcatenados;
     }
@@ -59,7 +65,10 @@ public class MostrarDatos implements Serializable {
     public IngresarDatos getIngresoDatos() {
         return ingresoDatos;
     }
-
+    /**
+     * 
+     * @param ingresoDatos 
+     */
     public void setIngresoDatos(IngresarDatos ingresoDatos) {
         this.ingresoDatos = ingresoDatos;
     }

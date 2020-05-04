@@ -30,12 +30,17 @@ public class IngresarDatos implements Serializable {
     public IngresarDatos() {
     }
     
-    
-
+    /**
+     * 
+     * @return cedula
+     */
     public String getCedula() {
         return cedula;
     }
-
+    /**
+     * 
+     * @param cedula 
+     */
     public void setCedula(String cedula) {
         this.cedula = cedula;
     }
@@ -43,7 +48,10 @@ public class IngresarDatos implements Serializable {
     public String getNombre() {
         return nombre;
     }
-
+    /**
+     * 
+     * @param nombre 
+     */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
@@ -51,7 +59,10 @@ public class IngresarDatos implements Serializable {
     public String getApellido() {
         return apellido;
     }
-
+    /**
+     * 
+     * @param apellido 
+     */
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
@@ -59,7 +70,10 @@ public class IngresarDatos implements Serializable {
     public Date getFechaN() {
         return fechaN;
     }
-
+    /**
+     * 
+     * @param fechaN 
+     */
     public void setFechaN(Date fechaN) {
         this.fechaN = fechaN;
     }
@@ -67,7 +81,10 @@ public class IngresarDatos implements Serializable {
     public String getNivel() {
         return nivel;
     }
-
+    /**
+     *  
+     * @param nivel 
+     */
     public void setNivel(String nivel) {
         this.nivel = nivel;
     }
@@ -75,7 +92,10 @@ public class IngresarDatos implements Serializable {
     public String[] getIdiomas() {
         return idiomas;
     }
-
+    /**
+     * 
+     * @param idiomas 
+     */
     public void setIdiomas(String[] idiomas) {
         this.idiomas = idiomas;
     }
@@ -83,7 +103,10 @@ public class IngresarDatos implements Serializable {
     public int getDiasLaborados() {
         return diasLaborados;
     }
-
+    /**
+     * 
+     * @param diasLaborados 
+     */
     public void setDiasLaborados(int diasLaborados) {
         this.diasLaborados = diasLaborados;
     }
