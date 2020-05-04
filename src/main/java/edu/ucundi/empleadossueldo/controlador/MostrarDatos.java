@@ -4,10 +4,13 @@
  * and open the template in the editor.
  */
 package edu.ucundi.empleadossueldo.controlador;
+
 import edu.ucundi.empleadossueldo.modelo.CalcularSueldo;
+import java.io.Serializable;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
+
 import javax.inject.Named;
 
 /**
@@ -16,19 +19,21 @@ import javax.inject.Named;
  */
 @Named(value = "mostrarDatos")
 @RequestScoped
-public class MostrarDatos {
+public class MostrarDatos implements Serializable {
+
     private double sueldo;
     //Variable que guarda los idiomas del usuario
     private String idiomasConcatenados;
     //La inyeccion de los datos que ingreso el usuario
     @Inject
     private IngresarDatos ingresoDatos;
+
     /**
      * Metodo que calcula el sueldo y que se ejecuta despues del constructor
      */
     @PostConstruct
     public void calculaSueldo() {
-        CalcularSueldo calcula = new CalcularSueldo(ingresoDatos);    
+        CalcularSueldo calcula = new CalcularSueldo(ingresoDatos);
         setSueldo(calcula.getSueldo());
         setIdiomasConcatenados(calcula.getIdiomas());
     }
@@ -56,6 +61,5 @@ public class MostrarDatos {
     public void setIngresoDatos(IngresarDatos ingresoDatos) {
         this.ingresoDatos = ingresoDatos;
     }
-    
-     
+
 }

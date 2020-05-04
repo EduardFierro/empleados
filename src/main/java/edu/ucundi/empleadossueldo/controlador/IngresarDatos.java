@@ -5,17 +5,18 @@
  */
 package edu.ucundi.empleadossueldo.controlador;
 
+import java.io.Serializable;
 import java.util.Date;
-import javax.faces.bean.RequestScoped;
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
 /**
  *
  * @author Eduard Fierro
  */
-@Named(value = "ingresoDatos")
+@Named(value = "ingresarDatos")
 @RequestScoped
-public class IngresarDatos {
+public class IngresarDatos implements Serializable {
     private String cedula;
     private String nombre;
     private String apellido;
@@ -23,6 +24,11 @@ public class IngresarDatos {
     private String nivel;
     private String [] idiomas;
     private int diasLaborados;
+
+    public IngresarDatos() {
+    }
+    
+    
 
     public String getCedula() {
         return cedula;
