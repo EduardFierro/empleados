@@ -5,12 +5,40 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>TODO supply a title</title>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Mostrar Datos</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+    </h:head>
+    <h:body>
+        <p align="center" >
+            <H2>RECIBO DE PAGO</H2>
+        </p>
+        <form>
+            <p align="center"> 
+                <h:outputText value="#{mostrarDatos.ingresoDatos.cedula}: "/>
+                <h:outputText value ="#{mostrarDatos.ingresoDatos.nombre} "/>
+                <h:outputText value ="#{mostrarDatos.ingresoDatos.apellido} "/>
+                <h:outputText value ="#{mostrarDatos.ingresoDatos.fechaN} "/>
+                <br></br><br></br>
+                <h:outputText value="Nivel Estudio: "/>
+                <h:outputText value="#{mostrarDatos.ingresoDatos.profesion}"/>
+                <br></br><br></br>
+                <h:outputText value="Idiomas: "/>
+                <h:outputText value="#{mostrarDatos.idiomasConcatenados}"/>
+                <br></br><br></br>                
+                <h:outputText value="Días trabajados: "/>
+                <h:outputText value="#{mostrarDatos.ingresoDatos.diasLaborados}"/>
+                <br></br><br></br>
+                <h:outputText value="el valor de su cuenta es: "/>
+                <h:outputText value="#{mostrarDatos.sueldo}"/>
+                <br></br><br></br><br></br><br></br>
+                <h:form>
+                    <h:commandButton  value = "Volver" action="ingresarDatos"/>
+                </h:form>
+
+            </p>
+        </form>
+    </h:body>
 </html>
