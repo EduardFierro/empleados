@@ -8,13 +8,15 @@ package edu.ucundi.empleadossueldo.controlador;
 import java.io.Serializable;
 import java.util.Date;
 import javax.enterprise.context.RequestScoped;
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.view.ViewScoped;
 import javax.inject.Named;
 
 /**
  *
- * @author Eduard Fierro
+ * @author Eduard Fierro, Arley Rivera
  */
-@Named(value = "ingresarDatos")
+@Named(value = "IngresarDatos")
 @RequestScoped
 public class IngresarDatos implements Serializable {
     private String cedula;

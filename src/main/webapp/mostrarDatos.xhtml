@@ -12,14 +12,27 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </h:head>
     <h:body>
-        <p align="center" >
-            <H2>RECIBO DE PAGO</H2>
-        </p>
+        
         <form>
+            
             <p align="center"> 
-               
+                 <big>
+                     <big>
+                <h:outputText value=" RECIBO "/>
+                </big>
+                </big>
+                <br></br><br></br>
+                <br></br><br></br>
+                <h:outputText value="Cedula: "/>
+                 <h:outputText value ="#{mostrarDatos.ingresoDatos.cedula} "/>
+                <br></br><br></br>
+                 <h:outputText value="Nombre: "/>
                 <h:outputText value ="#{mostrarDatos.ingresoDatos.nombre} "/>
+                <br></br><br></br>
+                 <h:outputText value="Apellido: "/>
                 <h:outputText value ="#{mostrarDatos.ingresoDatos.apellido} "/>
+                <br></br><br></br>
+                <h:outputText value="Fecha Nacimiento: "/>
                 <h:outputText value ="#{mostrarDatos.ingresoDatos.fechaN} "/>
                 <br></br><br></br>
                 <h:outputText value="Nivel Estudio: "/>
@@ -37,7 +50,6 @@ and open the template in the editor.
                 <h:form>
                     <h:commandButton  value = "Volver" action="ingresarDatos"/>
                 </h:form>
-
             </p>
         </form>
     </h:body>

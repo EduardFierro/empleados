@@ -9,6 +9,8 @@ import edu.ucundi.empleadossueldo.modelo.CalcularSueldo;
 import java.io.Serializable;
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
+import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 
 import javax.inject.Named;

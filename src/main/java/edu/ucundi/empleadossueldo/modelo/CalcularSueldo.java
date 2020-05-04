@@ -9,7 +9,7 @@ import edu.ucundi.empleadossueldo.controlador.IngresarDatos;
 
 /**
  *
- * @author Eduard Fierro
+ * @author Eduard Fierro, Arley Rivera
  */
 public class CalcularSueldo {
 
@@ -72,7 +72,7 @@ public class CalcularSueldo {
     public void calculaSueldo() {
         if (validarDiasTrabajados()) {
             int subSueldo = 0;
-            subSueldo = getPagoNivel() * ingresodaDatos.getDiasLaborados();
+            subSueldo = getPagoNivel()+(30000 * ingresodaDatos.getDiasLaborados()) ;
             for (String s : ingresodaDatos.getIdiomas()) {
                 if (s.equals("Español")) {
                     subSueldo = subSueldo + 0;
@@ -87,7 +87,7 @@ public class CalcularSueldo {
                     subSueldo = subSueldo + 10000;
                 }
             }
-
+            
             setSueldo(subSueldo);
         }
     }
